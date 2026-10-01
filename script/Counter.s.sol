@@ -3,6 +3,7 @@ pragma solidity ^0.8.13;
 
 import {Script} from "../lib/forge-std/src/Script.sol";
 import {Counter} from "../src/Counter.sol";
+import {MyPermitToken} from "../src/MyPermitToken.sol";
 
 contract CounterScript is Script {
     Counter public counter;

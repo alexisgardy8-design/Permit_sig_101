@@ -13,4 +13,3 @@ contract CounterTest is Test {
     }
 
 }
-

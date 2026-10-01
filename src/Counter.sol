@@ -4,6 +4,8 @@ import {IExerciseSolution} from "../lib/forge-std/src/interfaces/IExerciseSoluti
 
 contract Counter is IExerciseSolution {
     address public constant EVALUATOR = 0xB91F87D09a6582b25B20149C60Ad40f23F99d8Dc;
+    address public constant PERMIT_TOKEN = 0xdE559E9a6086BB487FB7b062BeA48B40Ee128107;
+    address public owner = msg.sender;
 
     bytes32 private constant DOMAIN_TYPEHASH = keccak256(
         "EIP712Domain(string name,string version,uint256 chainId,address verifyingContract)"
@@ -54,11 +56,14 @@ contract Counter is IExerciseSolution {
         require(signer != address(0), "invalid sig");
     }
 
+    
+
+
     function getPermitToken() external view returns (address) {
-        return address(0); // à remplacer à la partie 6
+        return PERMIT_TOKEN;
     }
 
     function getSmartWallet() external view returns (address) {
-        return address(0); // à remplacer à la partie 9 (bonus)
+        return address(0);
     }
 }
